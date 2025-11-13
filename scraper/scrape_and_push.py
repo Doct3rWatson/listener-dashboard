@@ -29,14 +29,14 @@ from bs4 import BeautifulSoup
 # --------------------------- Configuration via environment ---------------------------
 # REQUIRED: one or more URLs (comma separated). Example:
 #   export LISTENER_URLS="https://radio.turtle-music.org/status.xsl,https://sgradio.turtle-music.org/status.xsl"
-# LISTENER_URLS = [u.strip() for u in os.getenv("LISTENER_URLS", "").split(",") if u.strip()]
+LISTENER_URLS = [u.strip() for u in os.getenv("LISTENER_URLS", "").split(",") if u.strip()]
 
 # # Optional human-readable labels for the series; must match the number/order of LISTENER_URLS
 # #   export LISTENER_LABELS="Tower 1,Tower 2"
-# LISTENER_LABELS = [s.strip() for s in os.getenv("LISTENER_LABELS", "").split(",") if s.strip()]
+LISTENER_LABELS = [s.strip() for s in os.getenv("LISTENER_LABELS", "").split(",") if s.strip()]
 
-LISTENER_URLS="https://radio.turtle-music.org/status.xsl,https://sgradio.turtle-music.org/status.xsl"
-LISTENER_LABELS="Tower 1,Tower 2" 
+# LISTENER_URLS="https://radio.turtle-music.org/status.xsl,https://sgradio.turtle-music.org/status.xsl"
+# LISTENER_LABELS="Tower 1,Tower 2" 
 
 # Base path of the repo (this script assumes it lives in <repo>/scraper/)
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
