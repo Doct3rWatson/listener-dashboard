@@ -40,7 +40,7 @@ LISTENER_LABELS="Tower 1,Tower 2"
 
 # Base path of the repo (this script assumes it lives in <repo>/scraper/)
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-SITE_DATA_DIR = os.path.join(REPO_ROOT, "site", "data")
+SITE_DATA_DIR = os.path.join(REPO_ROOT, "data")
 HISTORY_CSV = os.path.join(REPO_ROOT, "scraper", "history.csv")
 
 # How far back the 24h view should include (hours)
