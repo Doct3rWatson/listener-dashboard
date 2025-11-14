@@ -14,7 +14,21 @@
     button { border:1px solid #333; background:#121217; color:#e9e9ee; padding:8px 12px; border-radius:10px; cursor:pointer;}
     button.active { outline:2px solid #5da; }
     #updated { opacity:0.8; font-size:12px; }
-    canvas { background:#0e0e12; border:1px solid #222; border-radius:14px; padding:10px; }
+    .chart-wrapper {
+      position: relative;
+      height: 420px;   /* fixed visual height */
+      max-width: 100%;
+      margin-top: 12px;
+    }
+    canvas {
+      background:#0e0e12;
+      border:1px solid #222;
+      border-radius:14px;
+      padding:10px;
+      box-sizing: border-box;
+      width: 100% !important;
+      height: 100% !important;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -33,7 +47,9 @@
       <button id="refresh">Refresh Now</button>
     </div>
     <p>Total listeners is the bold line. Click series names in the legend to toggle visibility.</p>
-    <canvas id="chart" height="420"></canvas>
+    <div class="chart-wrapper">
+      <canvas id="chart"></canvas>
+    </div>
   </main>
 
   <script>
